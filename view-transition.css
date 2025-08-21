@@ -1,0 +1,85 @@
+/* View Transition Styles */
+@view-transition {
+    navigation: auto;
+}
+
+/* Prevent flash during transitions */
+html {
+    background-color: linear-gradient(180deg, #FFE29F 0%, #FFD15C 100%);
+}
+
+body {
+    background-color: linear-gradient(180deg, #FFE29F 0%, #FFD15C 100%);
+    transition: background-color 0.1s ease;
+}
+/* Background overlay during transition */
+::view-transition {
+    background-color: linear-gradient(180deg, #FFE29F 0%, #FFD15C 100%);
+}
+
+/* Smooth fade overlay */
+.view-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(180deg, #FFE29F 0%, #FFD15C 100%);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.page-transitioning .view-transition-overlay {
+    opacity: 1;
+}
+
+/* Container transition for smooth morphing */
+.container {
+    view-transition-name: container;
+}
+
+/* Form elements transition */
+.right-panel {
+    view-transition-name: form-panel;
+}
+
+/* Title transition */
+.Title {
+    view-transition-name: title-section;
+}
+
+/* Button transition */
+.create-btn {
+    view-transition-name: submit-button;
+}
+
+/* Link transition */
+.login-text {
+    view-transition-name: link-section;
+}
+
+/* Fallback for browsers without view transition support */
+.no-view-transitions .container {
+    transition: opacity 0.3s ease;
+}
+
+.no-view-transitions .container.fade-out {
+    opacity: 0;
+}
+
+/* Smooth hover effects for interactive elements */
+.view-transition-link {
+    transition: all 0.3s ease;
+}
+
+.view-transition-link:hover {
+    transform: scale(1.05);
+}
+
+/* Loading state */
+.page-transitioning {
+    pointer-events: none;
+    opacity: 0.8;
+}

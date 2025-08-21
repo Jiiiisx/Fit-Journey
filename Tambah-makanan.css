@@ -1,0 +1,141 @@
+/* Reset dan base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container utama */
+.add-menu-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  margin: 20px;
+}
+
+/* Photo upload section */
+.photo-upload {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo-label {
+  display: inline-block;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #666;
+}
+
+.photo-label:hover {
+  background-color: #e8e8e8;
+  border-color: #999;
+}
+
+/* Form styling */
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-name,
+.input-gram,
+.input-calories {
+  background-color: #fff1d6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-name:focus,
+.input-gram:focus,
+.input-calories:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+.input-name::placeholder,
+.input-gram::placeholder,
+.input-calories::placeholder {
+  color: #999;
+}
+
+/* Input row styling */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unit-label {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Button styling */
+.btn {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.add-button {
+  flex: 1;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.add-button:hover {
+  background-color: #e68900;
+}
+
+.add-button:first-child {
+  background-color: #6c757d;
+}
+
+.add-button:first-child:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .add-menu-container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .btn {
+    flex-direction: column;
+  }
+}
